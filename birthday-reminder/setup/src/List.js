@@ -1,7 +1,9 @@
 import React from 'react'
+import Individuals from './Individuals'
 
 //people is a prop here
-const List = ({ people }) => {
+const List = ({ people}) => {
+  
   return (
     <>
       {people.map((person) => {
@@ -12,6 +14,7 @@ const List = ({ people }) => {
             <div>
               <h4>{name}</h4>
               <p>{age} years</p>
+              <Individuals/>
             </div>
           </article>
         )
