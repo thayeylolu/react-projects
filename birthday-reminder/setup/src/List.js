@@ -3,6 +3,7 @@ import Individuals from './Individuals'
 
 //people is a prop here
 const List = ({ people }) => {
+	
 	return (
 		<>
 			{people.map((person) => {

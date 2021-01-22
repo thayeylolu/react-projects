@@ -2,20 +2,21 @@ import React, { useState } from 'react'
 import data from './data'
 
 const Individuals = () => {
-  const [individuals, setIndividuals] = useState(data);
+	//const [individuals, setIndividuals] = useState(data)
 
-	const removeItem = (id) => {
-		let newPeople = individuals.filter((person) => person.id !== id)
-		setIndividuals(newPeople)
-  }
-    const { id, name } = individuals
-  return (
-    <>
-          <div key={id} className='item'>
-            <h4>{name}</h4>
-            <button onClick={() => removeItem(id)}>remove</button>
-          </div>
-
-</>
-)};
+	const printout = () => {
+		return (
+			<div>
+				<h3>dddd</h3>
+			</div>
+		)
+	}
+	return (
+		<>
+			<div className='item'>
+				<button onClick={() => printout()}>remove</button>
+			</div>
+		</>
+	)
+}
 export default Individuals
