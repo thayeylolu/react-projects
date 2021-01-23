@@ -4,6 +4,8 @@ import List from './List'
 
 function App() {
   const [people, setPeople] = useState(data)
+  //const [individuals, setIndividuals] = useState(data)
+
   return (
     <main>
       <section className='container'>

@@ -1,8 +1,14 @@
-import React from 'react'
-import Individuals from './Individuals'
+import React, { useState } from 'react'
+import data from './data'
+
 
 //people is a prop here
 const List = ({ people }) => {
+	 const [individuals, setIndividuals] = useState(data)
+	 const removeItem = (id) => {
+			let newPeople = individuals.filter((ind) => ind.id !== id)
+			setIndividuals(newPeople)
+		}
 	
 	return (
 		<>
@@ -14,7 +20,20 @@ const List = ({ people }) => {
 						<div>
 							<h4>{name}</h4>
 							<p>{age} years</p>
-							<Individuals />
+							{individuals.map((ind) => {
+								const { id, name } = ind
+								return (
+									<div key={id} className='item'>
+										<h4>{name}</h4>
+										<button
+											onClick={() =>
+												removeItem(id)
+											}>
+											remove
+										</button>
+									</div>
+								)
+							})}
 						</div>
 					</article>
 				)
