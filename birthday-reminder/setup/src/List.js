@@ -4,7 +4,7 @@ import data from './data'
 
 //people is a prop here
 const List = ({ people }) => {
-	 const [individuals, setIndividuals] = useState(data)
+	 const [individuals, setIndividuals,setIndividuals] = useState(data)
 	 const removeItem = (id) => {
 			let newPeople = individuals.filter((ind) => ind.id !== id)
 			setIndividuals(newPeople)
